@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="doc">
+        <input type="text" placeholder="how many views you want" id="ammount">
+        <input type="text" placeholder="last link" id="link">
+
+        <button onclick="getviews()">Start</button>
+    </div>
+
+    <script>
+        function getviews(){
+        let views = document.getElementById("ammount").value
+        let link = document.getElementById("link").value
+        for(let i=0;i<=views;i++){
+            document.body.innerHTML += ` <iframe width='300' height='300' src='https://www.youtube.com/embed/${link}?autoplay=1&cc_load_policy=1' frameborder='1' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;' allowfullscreen></iframe>`
+        }
+    }
+    </script>
+</body>
+</html>
